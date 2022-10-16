@@ -1,10 +1,356 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+
+    <meta charset="utf-8">
+    <title>Horizontal Layout | Foxia - Responsive Bootstrap 5 Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
+    <meta content="Themesbrand" name="author">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/sweetalert2.min.css" rel="stylesheet" type="text/css">
+
 </head>
-<body>
-<h1>Hello nhà trọ xã đàn 2</h1>
+
+<body data-layout="horizontal" data-layout-size="boxed">
+
+<!-- Loader -->
+<div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+            <div style="text-align: center; padding: 10px"><h1>Hello [[${name}]]</h1></div>
+            <div class="container-fluid">
+
+                <div class="row" id="statis">
+                    <div class="col-xl-4 col-md-6">
+                        <div class="card mini-stats">
+                            <div class="p-3 mini-stats-content">
+                                <div class="mb-4">
+                                    <div class="float-end text-end">
+                                        <h6 class="mt-0 mb-3 text-white">Thành</h6>
+                                        <p class="text-white-50">Tổng chi: 1.000.000đ</p>
+                                    </div>
+                                    <img src="https://pyxis.nymag.com/v1/imgs/630/6e0/eb215ad90cd826b9e57ff505f54c5c7228-07-avatar.rsquare.w700.jpg" width="54" height="54" style="border-radius: 50%;" alt="" srcset="">
+                                    <!-- <span class="peity-pie" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"]}' data-width="54" data-height="54">5/8</span> -->
+                                </div>
+                            </div>
+                            <div class="mx-3">
+                                <div class="card mb-0 border p-3 mini-stats-desc">
+                                    <div class="d-flex">
+                                        <h6 class="mt-0 mb-3">Nợ</h6>
+                                        <h5 class="ms-auto mt-0">1.000.000đ</h5>
+                                    </div>
+                                    <p class="text-muted mb-0">Đạt: 500.00đ</p>
+                                    <p class="text-muted mb-0">Thủy: 500.00đ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <div class="card mini-stats">
+                            <div class="p-3 mini-stats-content">
+                                <div class="mb-4">
+                                    <div class="float-end text-end">
+                                        <h6 class="mt-0 mb-3 text-white">Đạt</h6>
+                                        <p class="text-white-50">Tổng chi: 1.000.000đ</p>
+                                    </div>
+                                    <img src="https://pyxis.nymag.com/v1/imgs/630/6e0/eb215ad90cd826b9e57ff505f54c5c7228-07-avatar.rsquare.w700.jpg" width="54" height="54" style="border-radius: 50%;" alt="" srcset="">
+                                    <!-- <span class="peity-pie" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"]}' data-width="54" data-height="54">5/8</span> -->
+                                </div>
+                            </div>
+                            <div class="mx-3">
+                                <div class="card mb-0 border p-3 mini-stats-desc">
+                                    <div class="d-flex">
+                                        <h6 class="mt-0 mb-3">Nợ</h6>
+                                        <h5 class="ms-auto mt-0">1.000.000đ</h5>
+                                    </div>
+                                    <p class="text-muted mb-0">Thành: 500.00đ</p>
+                                    <p class="text-muted mb-0">Thủy: 500.00đ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <div class="card mini-stats">
+                            <div class="p-3 mini-stats-content">
+                                <div class="mb-4">
+                                    <div class="float-end text-end">
+                                        <h6 class="mt-0 mb-3 text-white">Thủy</h6>
+                                        <p class="text-white-50">Tổng chi: 1.000.000đ</p>
+                                    </div>
+                                    <img src="https://pyxis.nymag.com/v1/imgs/630/6e0/eb215ad90cd826b9e57ff505f54c5c7228-07-avatar.rsquare.w700.jpg" width="54" height="54" style="border-radius: 50%;" alt="" srcset="">
+                                    <!-- <span class="peity-pie" data-peity='{ "fill": ["rgba(255, 255, 255, 0.8)", "rgba(255, 255, 255, 0.2)"]}' data-width="54" data-height="54">5/8</span> -->
+                                </div>
+                            </div>
+                            <div class="mx-3">
+                                <div class="card mb-0 border p-3 mini-stats-desc">
+                                    <div class="d-flex">
+                                        <h6 class="mt-0 mb-3">Nợ</h6>
+                                        <h5 class="ms-auto mt-0">1.000.000đ</h5>
+                                    </div>
+                                    <p class="text-muted mb-0">Đạt: 500.00đ</p>
+                                    <p class="text-muted mb-0">Thành: 500.00đ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mt-0 header-title">Latest Transactions</h4>
+                                <button onclick="openAdd()" class="btn btn-primary">Thêm chi tiêu</button>
+                                <div class="table-responsive mt-4">
+                                    <table id="datatable" class="table table-hover mb-0">
+                                        <thead>
+                                        <tr>
+                                            <th style="white-space: nowrap;">Khoản chi</th>
+                                            <th style="white-space: nowrap;">Giá tiền</th>
+                                            <th style="white-space: nowrap;">Người dùng</th>
+                                            <th style="white-space: nowrap;">Người tạo</th>
+                                            <th style="white-space: nowrap;">Ngày tạo</th>
+                                            <th style="white-space: nowrap;">Người sửa</th>
+                                            <th style="white-space: nowrap;">Ngày sửa</th>
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+<!--                                        <tr>-->
+<!--                                            <td>Tiger Nixon 1111</td>-->
+<!--                                            <td>System Architect</td>-->
+<!--                                            <td>Edinburgh</td>-->
+<!--                                            <td>61</td>-->
+<!--                                            <td>2011-04-25</td>-->
+<!--                                            <td>$320,800</td>-->
+<!--                                            <td>-->
+<!--                                                <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>-->
+<!--                                            </td>-->
+<!--                                        </tr>-->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+            </div>
+        </div>
+        <!-- End Page-content -->
+        <div class="swal2-container swal2-center swal2-backdrop-show" id="addChiTieu"
+             style="overflow-y: auto; display: none;">
+            <div aria-labelledby="swal2-title" aria-describedby="swal2-content" id="thanh1"
+                 class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive"
+                 aria-modal="true" style="display: flex; width: 90%; max-width: 700px;">
+                <button type="button" class="swal2-close" onclick="closeAdd()">×</button>
+                <h5>Thêm chi tiêu</h5>
+
+                <div class="tabAddHH">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Khoản chi</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="text" placeholder="Khoản chi"
+                                                   id="khoanChi">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Giá tiền</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="search" placeholder="Giá tiền"
+                                                   id="giaTien">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-3 col-form-label">Người dùng</label>
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="1" id="addThanh" required="">
+                                                <label class="form-check-label" for="addThanh">
+                                                    Thành
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="2" id="addDat" required="">
+                                                <label class="form-check-label" for="addDat">
+                                                    Đạt
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="3" id="addThuy" required="">
+                                                <label class="form-check-label" for="addThuy">
+                                                    Thủy
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Mô tả</label>
+                                        <div class="col-sm-10">
+                                            <textarea name="" id="note" class="form-control" cols="30" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footerAddHH">
+                    <button class="btn btn-primary" onclick="addChiTieu()">Thêm</button>
+                    <button class="btn btn-secondary" onclick="closeAdd()">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="swal2-container swal2-center swal2-backdrop-show" id="editChiTieu"
+             style="overflow-y: auto; display: none;">
+            <div aria-labelledby="swal2-title" aria-describedby="swal2-content" id=""
+                 class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive"
+                 aria-modal="true" style="display: flex; width: 90%; max-width: 700px;">
+                <button type="button" class="swal2-close" onclick="closeEdit()">×</button>
+                <h5>Sửa chi tiêu</h5>
+
+                <div class="tabAddHH">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row mb-3">
+                                        <input type="hidden" id="idSpending" value="">
+                                        <label class="col-sm-2 col-form-label">Khoản chi</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="text" placeholder="Khoản chi"
+                                                   id="editKhoanChi">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Giá tiền</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="search" placeholder="Giá tiền"
+                                                   id="editGiaTien">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-3 col-form-label">Người dùng</label>
+                                        <div class="col-sm-9">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="1" id="editThanh" required="">
+                                                <label class="form-check-label" for="editThanh">
+                                                    Thành
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="2" id="editDat" required="">
+                                                <label class="form-check-label" for="editDat">
+                                                    Đạt
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="3" id="editThuy" required="">
+                                                <label class="form-check-label" for="editThuy">
+                                                    Thủy
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label class="col-sm-2 col-form-label">Mô tả</label>
+                                        <div class="col-sm-10">
+                                            <textarea name="" id="editNote" class="form-control" cols="30" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footerAddHH">
+                    <button class="btn btn-primary" onclick="updateChiTieu()">Sửa</button>
+                    <button class="btn btn-danger" id="idDetele" idDelete="" onclick="deleteChiTieu(this)">Xóa</button>
+                    <button class="btn btn-secondary" onclick="closeEdit()">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer text-center">
+            © <script>document.write(new Date().getFullYear())</script> Home <span class="d-none d-sm-inline-block"> - Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
+        </footer>
+    </div>
+    <!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+
+<!-- JAVASCRIPT -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!--<script src="assets/js/metisMenu.min.js"></script>-->
+<!--<script src="assets/js/simplebar.min.js"></script>-->
+<!--<script src="assets/js/waves.min.js"></script>-->
+
+<!-- Required datatable js -->
+<script src="assets/js/jquery.dataTables.min.js"></script>
+<script src="assets/js/dataTables.bootstrap4.min.js"></script>
+<!-- Buttons examples -->
+<!--<script src="assets/js/dataTables.buttons.min.js"></script>-->
+<!--<script src="assets/js/buttons.bootstrap4.min.js"></script>-->
+<!-- Responsive examples -->
+
+<!-- Datatable init js -->
+<!--<script src="assets/js/datatables.init.js"></script>-->
+
+<!--<script src="assets/js/morris.min.js"></script>-->
+<!--<script src="assets/js/raphael.min.js"></script>-->
+
+
+<!--<script src="assets/js/jquery.peity.min.js"></script>-->
+
+<!--<script src="assets/js/dashboard.init.js"></script>-->
+
+<!--<script src="assets/js/app.js"></script>-->
+<script src="assets/system/system.js"></script>
+
+
+<script>
+    function closeAdd() {
+        document.getElementById('addChiTieu').style.display = 'none'
+    }
+    function closeEdit() {
+        document.getElementById('editChiTieu').style.display = 'none'
+    }
+    function openAdd() {
+        document.getElementById('addChiTieu').style.display = ''
+    }
+</script>
+
 </body>
 </html>

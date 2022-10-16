@@ -11,5 +11,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @since 10/10/2022 10:13 PM
  */
 public interface MemberRepository extends JpaRepository<Member, Integer> {
-
+    Member findByUsername(String username);
 }
