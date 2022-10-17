@@ -119,6 +119,12 @@ public class HomeController {
     @ResponseBody
     public Spending getSpendingById(@RequestParam("id") String id) {
         Spending spending = spendingRepository.findById(id).get();
+        Member member = (Member) servletRequest.getSession().getAttribute("member");
+        if(member.getId().equals(spending.getMember().getId())){
+            spending.setDelete(true);
+        } else {
+            spending.setDelete(false);
+        }
         return spending;
     }
 

@@ -19,9 +19,6 @@ function loadListSpending(){
     $.ajax({
         type: "GET",
         url: "spending",
-        // data: {
-        //     myLuckyNumber: 13
-        // },
         error: function () {
             console.log("error")
         },
@@ -73,22 +70,27 @@ function addChiTieu(){
 
     console.log(spendingDto)
 
-    $.ajax({
-        type: "POST",
-        url: "spending",
-        contentType: "application/json",
-        data: JSON.stringify(spendingDto),
-        dataType: 'json',
-        error: function (error) {
-            console.log(error)
-            loadListSpending()
-            document.getElementById('addChiTieu').style.display = 'none'
-        },
-        success: function (dataOut) {
-            document.getElementById('addChiTieu').style.display = 'none'
-            loadListSpending()
-        },
-    });
+    let check = validate(spendingDto);
+    console.log(check)
+
+    if(check){
+        $.ajax({
+            type: "POST",
+            url: "spending",
+            contentType: "application/json",
+            data: JSON.stringify(spendingDto),
+            dataType: 'json',
+            error: function (error) {
+                console.log(error)
+                loadListSpending()
+                document.getElementById('addChiTieu').style.display = 'none'
+            },
+            success: function (dataOut) {
+                document.getElementById('addChiTieu').style.display = 'none'
+                loadListSpending()
+            },
+        });
+    }
 }
 
 function onUpdateChiTieu(id){
@@ -101,6 +103,11 @@ function onUpdateChiTieu(id){
         },
         success: function (dataOut) {
             console.log(dataOut)
+            if(dataOut.delete){
+                document.getElementById('idDetele').style.display = ''
+            } else {
+                document.getElementById('idDetele').style.display = 'none'
+            }
             document.getElementById('editChiTieu').style.display = ''
             $('#idSpending')[0].value = id;
             $('#editKhoanChi')[0].value = dataOut.expenses;
@@ -135,23 +142,26 @@ function updateChiTieu(){
     }
 
     console.log(spendingDto)
+    let check = validate(spendingDto);
+    if(check){
+        $.ajax({
+            type: "POST",
+            url: "spending",
+            contentType: "application/json",
+            data: JSON.stringify(spendingDto),
+            dataType: 'json',
+            error: function (error) {
+                console.log(error)
+                loadListSpending()
+                document.getElementById('editChiTieu').style.display = 'none'
+            },
+            success: function (dataOut) {
+                document.getElementById('editChiTieu').style.display = 'none'
+                loadListSpending()
+            },
+        });
 
-    $.ajax({
-        type: "POST",
-        url: "spending",
-        contentType: "application/json",
-        data: JSON.stringify(spendingDto),
-        dataType: 'json',
-        error: function (error) {
-            console.log(error)
-            loadListSpending()
-            document.getElementById('editChiTieu').style.display = 'none'
-        },
-        success: function (dataOut) {
-            document.getElementById('editChiTieu').style.display = 'none'
-            loadListSpending()
-        },
-    });
+    }
 }
 
 function deleteChiTieu(elm){
@@ -213,4 +223,25 @@ function loadStatis(){
             document.getElementById('preloader').style.display = 'none'
         },
     });
+}
+
+function validate(spendingDto) {
+    if(spendingDto.expenses.trim().length === 0){
+        alert("Nhập khoản chi vào!");
+        return false;
+    } else if(spendingDto.price.trim().length === 0){
+        alert("Nhập giá vào!");
+        return false;
+    } else if(!/^\d+$/.test(spendingDto.price)){
+        alert("Giá là số chứ!");
+        return false;
+    } else if(Number(spendingDto.price) < 0) {
+        alert("Mua gì mà âm!");
+        return false;
+    }else if(spendingDto.use.length === 0){
+        alert("Chọn người dùng đi!");
+        return false;
+    } else {
+        return true;
+    }
 }

@@ -36,6 +36,8 @@ public class Spending {
  @Column(name = "modify_date")
  private Date modifiedDate;
  private String note;
+ @Transient
+ private boolean isDelete;
 
  @OneToMany(mappedBy = "spendingId")
  private List<MemberSpending> memberSpendings;
