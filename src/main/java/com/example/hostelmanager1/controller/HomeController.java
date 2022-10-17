@@ -16,10 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -47,6 +44,7 @@ public class HomeController {
     @GetMapping("/home")
     public String homePage(@RequestParam("username") String username, Model model) {
 //        if(servletRequest.getSession().getAttribute("username") == null){
+        username = username.toLowerCase(Locale.ROOT);
             Member member = memberRepository.findByUsername(username);
             if(member != null){
                 servletRequest.getSession().setAttribute("username", member.getUsername());
