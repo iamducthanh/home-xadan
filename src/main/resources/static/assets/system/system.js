@@ -11,6 +11,10 @@ $(document).ready(function () {
             { data: 'modifiedDate' },
             { data: 'action' },
         ],
+        dom: 'Bfrtip',
+        buttons: [
+            'print'
+        ],
         order: [[6, 'desc']],
     })
     loadListSpending()
@@ -57,9 +61,10 @@ function addChiTieu(){
     let giaTien = document.getElementById('giaTien').value
     let note = document.getElementById('note').value
     let use = new Array();
-    $('#addDat')[0].checked ? use.push($('#addDat')[0].value) : ''
     $('#addThanh')[0].checked ? use.push($('#addThanh')[0].value) : ''
-    $('#addThuy')[0].checked ? use.push($('#addThuy')[0].value) : ''
+    $('#addMai')[0].checked ? use.push($('#addMai')[0].value) : ''
+    $('#addNgoc')[0].checked ? use.push($('#addNgoc')[0].value) : ''
+    $('#addHai')[0].checked ? use.push($('#addHai')[0].value) : ''
 
     let spendingDto = {
         expenses: khoanChi,
@@ -116,8 +121,9 @@ function onUpdateChiTieu(id){
 
             dataOut.memberSpendings.forEach(o => {
                 o.member.id == 1 ? $('#editThanh')[0].checked = true : ''
-                o.member.id == 2 ? $('#editDat')[0].checked = true : ''
-                o.member.id == 3 ? $('#editThuy')[0].checked = true : ''
+                o.member.id == 2 ? $('#editMai')[0].checked = true : ''
+                o.member.id == 3 ? $('#editNgoc')[0].checked = true : ''
+                o.member.id == 4 ? $('#editHai')[0].checked = true : ''
             })
         },
     });
@@ -129,9 +135,10 @@ function updateChiTieu(){
     let note = document.getElementById('editNote').value
     let idSpending = document.getElementById('idSpending').value
     let use = new Array();
-    $('#editDat')[0].checked ? use.push($('#editDat')[0].value) : ''
+    $('#editMai')[0].checked ? use.push($('#editMai')[0].value) : ''
     $('#editThanh')[0].checked ? use.push($('#editThanh')[0].value) : ''
-    $('#editThuy')[0].checked ? use.push($('#editThuy')[0].value) : ''
+    $('#editNgoc')[0].checked ? use.push($('#editNgoc')[0].value) : ''
+    $('#editHai')[0].checked ? use.push($('#editHai')[0].value) : ''
 
     let spendingDto = {
         idSpending: idSpending,
@@ -193,7 +200,7 @@ function loadStatis(){
             $('#statis')[0].innerHTML = '';
             let statisContainer = $('#statis')[0];
             for (let data of dataOut) {
-                statisContainer.innerHTML += '<div class="col-xl-4 col-md-6">\n' +
+                statisContainer.innerHTML += '<div class="col-xl-3 col-md-6">\n' +
                     '                        <div class="card mini-stats">\n' +
                     '                            <div class="p-3 mini-stats-content">\n' +
                     '                                <div class="mb-4">\n' +
@@ -213,6 +220,7 @@ function loadStatis(){
                     '                                    </div>\n' +
                     '                                    <p class="text-muted mb-0">'+data.debitInfos[0].creditor+': '+data.debitInfos[0].total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')+'đ</p>\n' +
                     '                                    <p class="text-muted mb-0">'+data.debitInfos[1].creditor+': '+data.debitInfos[1].total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')+'đ</p>\n' +
+                    '                                    <p class="text-muted mb-0">'+data.debitInfos[2].creditor+': '+data.debitInfos[2].total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')+'đ</p>\n' +
                     '                                </div>\n' +
                     '                            </div>\n' +
                     '                        </div>\n' +
