@@ -38,7 +38,7 @@ public class HomeController {
     @GetMapping("/")
     public String home(){
         servletRequest.getSession().setAttribute("member", null);
-        return "index";
+        return "home";
     }
 
     @GetMapping("/home")

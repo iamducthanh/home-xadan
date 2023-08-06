@@ -120,7 +120,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="mt-0 header-title">Latest Transactions</h4>
-                                <button onclick="openAdd()" class="btn btn-primary">Thêm chi tiêu</button>
+                                <button th:if="${username != null}" onclick="openAdd()" class="btn btn-primary">Thêm chi tiêu</button>
                                 <div class="table-responsive mt-4">
                                     <table id="datatable" class="table table-hover mb-0">
                                         <thead>
@@ -305,7 +305,7 @@
 
                 </div>
                 <div class="footerAddHH">
-                    <button class="btn btn-primary" onclick="updateChiTieu()">Sửa</button>
+                    <button class="btn btn-primary" th:if="${username != null}" onclick="updateChiTieu()">Sửa</button>
                     <button class="btn btn-danger" id="idDetele" idDelete="" onclick="deleteChiTieu(this)">Xóa</button>
                     <button class="btn btn-secondary" onclick="closeEdit()">Đóng</button>
                 </div>
