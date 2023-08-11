@@ -51,6 +51,7 @@ public class HomeController {
                 servletRequest.getSession().setAttribute("member", member);
                 servletRequest.getSession().setAttribute("fullname", member.getFullname());
                 model.addAttribute("name", member.getFullname());
+                model.addAttribute("username", member.getUsername());
                 return "home";
             } else {
                 return "index";
