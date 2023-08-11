@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -65,6 +64,8 @@ public class HomeController {
     @GetMapping("spending")
     @ResponseBody
     public List<Spending> getAllSpending() {
+        List<Spending> sp = spendingRepository.getAllSpending();
+        Collections.sort(sp, Comparator.comparing(Spending::getModifiedDate));
         return spendingRepository.getAllSpending();
     }
 
