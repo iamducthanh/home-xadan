@@ -12,6 +12,6 @@ import java.util.List;
  * @since 10/11/2022
  */
 public interface SpendingRepository extends JpaRepository<Spending, String> {
-    @Query("select o from spending o order by o.modifiedDate desc ")
+    @Query("select o from spending o order by o.createdDate desc ")
     List<Spending> getAllSpending();
 }
