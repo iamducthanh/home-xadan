@@ -15,7 +15,7 @@ $(document).ready(function () {
         buttons: [
             'print'
         ],
-        order: [[6, 'desc']],
+        order: false
     })
     loadListSpending()
 });
@@ -39,9 +39,9 @@ function loadListSpending(){
                     price: dataOut[i].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'đ',
                     use: use,
                     createBy: dataOut[i].member.fullname,
-                    createdDate: new Date(dataOut[i].createdDate).toLocaleDateString("en-US"),
+                    createdDate: new Date(dataOut[i].createdDate).toLocaleDateString("en-GB"),
                     modifyBy: dataOut[i].modifiedBy,
-                    modifiedDate: new Date(dataOut[i].modifiedDate).toLocaleDateString("en-US") + ' ' + new Date(dataOut[i].modifiedDate).getHours() +':' + new Date(dataOut[i].modifiedDate).getMinutes(),
+                    modifiedDate: new Date(dataOut[i].modifiedDate).toLocaleDateString("en-GB") + ' ' + new Date(dataOut[i].modifiedDate).getHours() +':' + new Date(dataOut[i].modifiedDate).getMinutes(),
                     action: '<button onclick="onUpdateChiTieu(\''+dataOut[i].id+'\')" class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>',
                 })
             }
